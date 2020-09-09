@@ -1,4 +1,4 @@
-// env is a small package that parse environment variables to a basic type.
+// Package env is a small package that parse environment variables to a basic type.
 package env
 
 import (
