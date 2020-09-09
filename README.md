@@ -2,13 +2,28 @@
 
 ![License](https://img.shields.io/github/license/Kansuler/env) ![Version](https://img.shields.io/github/go-mod/go-version/Kansuler/env) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/693cfbf7964f457ead99202fc6d12679)](https://www.codacy.com/manual/Kansuler/env?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Kansuler/env&amp;utm_campaign=Badge_Grade)
 
-A small package that gets environment variables and convert them to their purposed basic type. If invalid, use the fallback value.
+A small package that gets environment variables and convert them to their purposed basic type. If invalid or unset, use the fallback value.
 
 API and detailed documentation can be found at [https://godoc.org/github.com/Kansuler/env](https://godoc.org/github.com/Kansuler/env)
 
 ## Installation
 
 `go get github.com/Kansuler/env`
+
+## Usage example
+
+```go
+import "github.com/Kansuler/env"
+
+func main() {
+    // get environment variable `test_environment` as bool, if not set use fallback value
+    testEnv := env.Bool("test_environment", false)
+    
+    if testEnv {
+        // Do test env stuff...
+    }
+}
+```
 
 ## Functions
 
